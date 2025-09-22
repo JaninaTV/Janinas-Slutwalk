@@ -1,0 +1,58 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <application
+    android:allowBackup="true"
+    android:label="OutfitGuardian"
+    android:theme="@style/Theme.Material3.DayNight.NoActionBar">
+
+    <provider
+      android:name="androidx.core.content.FileProvider"
+      android:authorities="com.example.outfitguardian.fileprovider"
+      android:exported="false"
+      android:grantUriPermissions="true">
+      <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/file_paths" />
+    </provider>
+
+    <activity
+      android:name=".NotPinActivity"
+      android:exported="false"
+      android:excludeFromRecents="true"
+      android:taskAffinity=""
+      android:turnScreenOn="true"
+      android:showOnLockScreen="true" />
+
+    <activity
+      android:name=".MainActivity"
+      android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+    <service
+      android:name=".SessionForegroundService"
+      android:exported="false"
+      android:foregroundServiceType="location" />
+  
+    <activity
+      android:name=".HeelLiftProbeActivity"
+      android:exported="false"
+      android:showOnLockScreen="true"
+      android:turnScreenOn="true"
+      android:excludeFromRecents="true"
+      android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+  
+    <activity
+      android:name=".FastenerMacroActivity"
+      android:exported="false"
+      android:showOnLockScreen="true"
+      android:turnScreenOn="true"
+      android:excludeFromRecents="true"
+      android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+  </application>
+</manifest>

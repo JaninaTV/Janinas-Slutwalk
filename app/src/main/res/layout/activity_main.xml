@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+      android:id="@+id/tvSession"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Session: INAKTIV" />
+
+    <Button
+      android:id="@+id/btnSetRoute"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Route & Hotspots setzen (friert nach Start ein)"
+      android:layout_marginTop="8dp"/>
+
+    <Button
+      android:id="@+id/btnRefPhoto"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Referenzfoto aufnehmen (bis 50)"
+      android:layout_marginTop="8dp"/>
+
+    <TextView
+      android:id="@+id/tvRefCount"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Referenzen: 0 / 50"
+      android:layout_marginTop="4dp"/>
+
+    <Button
+      android:id="@+id/btnStartSession"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Session starten (Not-PIN 3s)"
+      android:layout_marginTop="8dp"/>
+
+    <Button
+      android:id="@+id/btnOutfitCheck"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Outfitcheck jetzt"
+      android:layout_marginTop="8dp"/>
+
+    <Button
+      android:id="@+id/btnStopWithPin"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Session mit Not-PIN beenden"
+      android:layout_marginTop="8dp"/>
+
+    <TextView
+      android:id="@+id/tvLastCheck"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Letzter Outfitcheck: —"
+      android:layout_marginTop="8dp"/>
+
+    <Button
+      android:id="@+id/btnStopSessionUnsafe"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="(Dev) Session sofort beenden"
+      android:layout_marginTop="24dp"/>
+  
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="8dp">
+      <Button
+        android:id="@+id/btnPresetEnable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Pflichtoutfit aktivieren"/>
+      <Button
+        android:id="@+id/btnPresetDisable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Pflichtoutfit deaktivieren"/>
+    
+  <include layout="@layout/view_direction_hud"/>
+  <include layout="@layout/view_fail_counter"/>
+</LinearLayout>
+
+
+    <TextView
+      android:id="@+id/tvPreset"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="8dp"
+      android:text="Pflichtoutfit: aus"/> 
+
+  <include layout="@layout/view_direction_hud"/>
+  <include layout="@layout/view_fail_counter"/>
+</LinearLayout>
+
+
+
+</ScrollView>

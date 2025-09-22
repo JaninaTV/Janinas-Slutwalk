@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="#00000000"
+  android:padding="8dp">
+  <ImageView
+    android:id="@+id/ivArrow"
+    android:layout_width="72dp"
+    android:layout_height="72dp"
+    android:src="@android:drawable/arrow_up_float"
+    android:layout_gravity="center_horizontal" />
+  <TextView
+    android:id="@+id/tvPrompt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Richtung halten"
+    android:textStyle="bold"
+    android:textColor="#FFFFFF"
+    android:layout_gravity="center_horizontal"
+    android:paddingTop="4dp"/>
+</FrameLayout>

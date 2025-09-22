@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:keepScreenOn="true">
+  <androidx.camera.view.PreviewView
+    android:id="@+id/previewView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+  <TextView
+    android:id="@+id/tvInfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Heel-Lift-Probe: Ferse 5s leicht anheben, Zehen bleiben am Boden."
+    android:padding="16dp"
+    android:textColor="#FFFFFF"
+    android:textStyle="bold"
+    android:background="#66000000"/>
+  <TextView
+    android:id="@+id/tvCountdown"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="5"
+    android:textStyle="bold"
+    android:textColor="#FFFFFF"
+    android:textSize="64sp"/>
+</FrameLayout>

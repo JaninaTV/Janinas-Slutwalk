@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:padding="6dp">
+  <TextView
+    android:id="@+id/tvFailCounter"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Fails: 0 | Streak: 0"
+    android:textStyle="bold"
+    android:textSize="14sp"
+    android:textColor="#FFFFFF"/>
+</FrameLayout>
