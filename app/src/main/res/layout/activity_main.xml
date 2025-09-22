@@ -18,7 +18,7 @@
       android:id="@+id/btnSetRoute"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Route & Hotspots setzen (friert nach Start ein)"
+      android:text="Route &amp; Hotspots setzen (friert nach Start ein)"
       android:layout_marginTop="8dp"/>
 
     <Button
