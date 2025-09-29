@@ -1,20 +1,26 @@
 package com.example.outfitguard.rules
 
-/**
- * Live-Requirements, die die App/Session fortlaufend erzwingt.
- */
 data class SessionRequirements(
-    var skirtMaxToPoEdge: Boolean = false,          // Mikro bis Po-Falte
-    var skirtLocked: Boolean = false,               // Länge fixiert, nicht änderbar
-    var heelMinCm: Int = 8,
-    var noPlateau: Boolean = true,
-    var hosieryAllowed: Set<Hosiery> = setOf(Hosiery.BLACK_GLOSS),
-    var needWhiteKneeOver: Boolean = true,          // Weiße Kniestrümpfe/Rüschen drüber sichtbar
-    var requireContrast: Boolean = true,            // Sichtbarer Kontrast Pflicht
-    var enforceContrastAtCheck: Boolean = true      // Bei Outfitcheck prüfen
-)
+    // Panty-Hotpants
+    var allowPantsException: Boolean = false,
+    var pantsPantyOnly: Boolean = false,
+    var pantsMustNotCoverButt: Boolean = false,
+    var thighsMustBeFullyFree: Boolean = false,
 
-enum class Hosiery {
-    BLACK_GLOSS,   // 40–80 den, glänzend
-    PURE_WHITE     // bewusst vorhanden, aber im aktuellen Profil verboten
-}
+    // Nano-Minirock
+    var nanoSkirtActive: Boolean = false,
+    var buttCoverMaxPercent: Int = 0,
+
+    // Cutout-Minirock
+    var cutoutSkirtActive: Boolean = false,
+    var cutoutSizeMinPercent: Int = 0,   // wie groß müssen Cutouts sein
+    var movementDuty: Boolean = false,
+
+    // Gemeinsame Pflichten
+    var hosieryMandatory: Boolean = true,
+    var hosieryBlackGlossRecommended: Boolean = true,
+    var heelsMinCm: Int = 14,
+    var noPlateau: Boolean = true,
+
+    var frozen: Boolean = false
+)
